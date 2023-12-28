@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arushi's Portfolio</title>
+    <link rel="Stylesheet" href="styles.css" />
+    <script src="https://kit.fontawesome.com/e9a74b297b.js" crossorigin="anonymous"></script>
+</head>
+<body>
+   <div id="header">
+        <div class="container">
+            <nav>
+                <img src="./logo_1.jpg" class="logo"/>
+                <ul>
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-text">
+                <p>Web Designer</p>
+                <h1>Hi, I'm <span>Arushi.</span></h1>
+            </div>
+        </div>
+   </div> 
+
+   <div id="about">
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+                <img src="./2nd.jpeg">
+            </div>
+            <div class="about-col-2">
+                <h1 class="sub-title">About Me</h1>
+                <p>A passionate student that is driven by a desire for continous growth,I actively engage in honing my skills in HTML,CSS and JavaScript.The process of transforming ideas into functional and aesthetically pleasing websites fuels my enthusiasm.</p>
+                <div class="tab-titles">
+                    <p class="tab-links active-link" onclick="opentab('Skills')">Skills</p>
+                    <p class="tab-links" onclick="opentab('Experience')">Experience</p>
+                    <p class="tab-links" onclick="opentab('Education')">Education</p>
+                </div>
+                <div class="tab-contents active-tab" id="Skills">
+                    <ul>
+                        <li><span>Web Development</span><br>Web app Development</li>
+                        <li><span>Java</span><br>OOPS,DSA</li>
+                        <li><span>SQL</span><br>DataBase Management System</li>
+                        <li><span>Python</span><br>Pandas, Matplotlib</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="Experience">
+                    <ul>
+                        <li><span>Summer Intern</span><br>AR VR Internship</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="Education">
+                    <ul>
+                        <li><span>Indira Gandhi Delhi Technical University for Women</span><br>B.Tech in Artificial Intelligence ans Machine Learning (2022-2026)</li>
+                        <li><span>St. Francis de Sales School</span><br>Class XII (2021-2022)</li>
+                        <li><span>St. Francis de Sales School</span><br>Class X (2019-2020)</li>
+                        
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+   </div>
+   <!----------contact-------->
+   <div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="sub-title">Contact Me</h1>
+                <p><i class="fa-solid fa-paper-plane"></i>arushi10784@gmail.com</p>
+                <p><i class="fa-solid fa-phone-volume"></i>+91 7827862322</p>
+                <div class="social-icons">
+                    <a href="https://github.com/Arushi-12"><i class="fa-brands fa-github"></i></a>
+                    <a href="https://twitter.com/Tweety_slime_12?t=bs2RYX5HAKaNvDTVaVvYwQ&s=09"><i class="fa-brands fa-square-twitter"></i></a>
+                    <a href="https://www.linkedin.com/in/arushi-arora-2aa95b258?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><i class="fa-brands fa-linkedin-in"></i></a>
+                </div>
+            </div>
+            <div class="contact-right">
+                <form action="">
+                    <input type="text" name="Name" placeholder="Your Name" required>
+                    <input type="text" name="Email" placeholder="Your Email" required>
+                    <textarea name="Message"  rows="6" placeholder="Your Message"></textarea>
+                    <button type="submit" class="btn btn2">submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="copyright">
+        <p>Copyright © Arushi. Made with <i class="fa-solid fa-heart"></i> by Arushi</p>
+    </div>
+   </div>
+<script>
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+</script>
+</body>
+</html>
